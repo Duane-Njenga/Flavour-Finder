@@ -1,0 +1,131 @@
+{
+    "recipes": [
+      {
+        "id": 1,
+        "name": "Vegetable Stir Fry",
+        "category": "Vegetarian",
+        "ingredients": [
+          "2 tbsp olive oil",
+          "1 bell pepper, sliced",
+          "1 carrot, julienned",
+          "1 broccoli head, cut into florets",
+          "2 garlic cloves, minced",
+          "2 tbsp soy sauce",
+          "1 tsp sesame oil"
+        ],
+        "picture": "https://images.themodernproper.com/production/posts/VegetableStirFry_9.jpg?w=600&q=82&auto=format&fit=crop&dm=1703377301&s=c8e0952a29bd33b3df33a64ab2b2ff28",
+        "cookingInstructions": "1. Heat olive oil in a pan over medium heat.\n2. Add garlic and sauté until fragrant.\n3. Add bell pepper, carrot, and broccoli. Stir fry for 5–7 minutes.\n4. Stir in soy sauce and sesame oil.\n5. Cook for another 2 minutes.\n6. Serve hot."
+      },
+      {
+        "id": 2,
+        "name": "Caprese Salad",
+        "category": "Vegetarian",
+        "ingredients": [
+          "4 tomatoes, sliced",
+          "250g mozzarella cheese, sliced",
+          "Fresh basil leaves",
+          "2 tbsp olive oil",
+          "Salt and pepper to taste",
+          "Balsamic glaze (optional)"
+        ],
+        "picture": "https://hips.hearstapps.com/hmg-prod/images/caprese-salad-recipe-2-664ceea357d6f.jpg?crop=0.8888888888888888xw:1xh;center,top&resize=1200:*",
+        "cookingInstructions": "1. Arrange tomato and mozzarella slices on a plate.\n2. Add basil leaves between slices.\n3. Drizzle with olive oil.\n4. Season with salt and pepper.\n5. Drizzle with balsamic glaze if desired.\n6. Serve chilled."
+      },
+      {
+        "id": 3,
+        "name": "Grilled Salmon with Asparagus",
+        "category": "Pescatarian",
+        "ingredients": [
+          "2 salmon fillets",
+          "1 bunch asparagus",
+          "2 tbsp olive oil",
+          "Salt and pepper to taste",
+          "1 lemon, sliced"
+        ],
+        "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5c_nOYWl3DKVjSqo-BltRaqPfrCpNOhrWLA&s",
+        "cookingInstructions": "1. Preheat grill to medium heat.\n2. Drizzle salmon and asparagus with olive oil.\n3. Season with salt and pepper.\n4. Grill salmon for 4–5 minutes per side.\n5. Grill asparagus for 3–4 minutes until tender.\n6. Serve with lemon slices."
+      },
+      {
+        "id": 4,
+        "name": "Tuna Poke Bowl",
+        "category": "Pescatarian",
+        "ingredients": [
+          "200g sushi-grade tuna, diced",
+          "1 cup sushi rice",
+          "1 avocado, diced",
+          "1 cucumber, sliced",
+          "2 tbsp soy sauce",
+          "1 tsp sesame oil",
+          "Sesame seeds"
+        ],
+        "picture": "https://www.lecremedelacrumb.com/wp-content/uploads/2023/05/A2F721E8-4953-4974-8291-962D1578AE41-1024x1536.jpeg",
+        "cookingInstructions": "1. Cook sushi rice according to package instructions.\n2. In a bowl, combine tuna, soy sauce, and sesame oil.\n3. Arrange rice, tuna, avocado, and cucumber in a bowl.\n4. Sprinkle with sesame seeds.\n5. Serve immediately."
+      },
+      {
+        "id": 5,
+        "name": "Gluten-Free Pancakes",
+        "category": "Gluten-Free",
+        "ingredients": [
+          "1 cup gluten-free flour",
+          "1 tsp baking powder",
+          "1/2 tsp salt",
+          "1 cup milk (or almond milk)",
+          "1 egg",
+          "1 tbsp sugar",
+          "1 tsp vanilla extract"
+        ],
+        "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzwIktovhdCq8j3g6-5DYZ7fM0_Wexv5JQBw&s",
+        "cookingInstructions": "1. In a bowl, mix flour, baking powder, and salt.\n2. In a separate bowl, whisk milk, egg, sugar, and vanilla.\n3. Combine wet and dry ingredients, mix until smooth.\n4. Heat a non-stick pan over medium heat.\n5. Pour batter onto pan, cook until bubbles form.\n6. Flip and cook until golden.\n7. Serve with syrup or fruit."
+      },
+      {
+        "id": 6,
+        "name": "Gluten-Free Chicken Tenders",
+        "category": "Gluten-Free",
+        "ingredients": [
+          "500g chicken breast, cut into strips",
+          "1 cup gluten-free breadcrumbs",
+          "1 egg, beaten",
+          "1/2 cup almond flour",
+          "1 tsp paprika",
+          "Salt and pepper to taste",
+          "Cooking oil spray"
+        ],
+        "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu2-Tk8xttpP9fYFgExpBABGyn35XlPsB2Og&s",
+        "cookingInstructions": "1. Preheat oven to 200°C (400°F).\n2. Dip chicken strips in almond flour, then egg, then breadcrumbs.\n3. Place on a baking sheet and spray with cooking oil.\n4. Bake for 20–25 minutes, turning halfway.\n5. Serve with your favorite dipping sauce."
+      },
+      {
+        "id": 7,
+        "name": "Vegan Chickpea Curry",
+        "category": "Vegan",
+        "ingredients": [
+          "1 can chickpeas, drained",
+          "1 onion, chopped",
+          "2 garlic cloves, minced",
+          "1 can coconut milk",
+          "2 tbsp curry powder",
+          "Salt to taste",
+          "1 tbsp olive oil"
+        ],
+        "picture": "https://rainbowplantlife.com/wp-content/uploads/2023/02/chickpea-curry-cover-photo-1-of-1.jpg",
+        "cookingInstructions": "1. Heat olive oil in a pot over medium heat.\n2. Add onion and garlic, sauté until soft.\n3. Stir in curry powder and cook for 1 minute.\n4. Add chickpeas and coconut milk.\n5. Simmer for 10–15 minutes.\n6. Season with salt.\n7. Serve with rice."
+      },
+      {
+        "id": 8,
+        "name": "Vegan Tofu Stir Fry",
+        "category": "Vegan",
+        "ingredients": [
+          "200g tofu, cubed",
+          "1 bell pepper, sliced",
+          "1 carrot, julienned",
+          "1 cup snow peas",
+          "2 tbsp soy sauce",
+          "1 tsp sesame oil",
+          "1 tsp grated ginger"
+        ],
+        "picture": "https://runningonrealfood.com/wp-content/uploads/2021/11/Vegan-Cashew-Tofu-Stir-Fry-Recipe-13-1.jpg",
+        "cookingInstructions": "1. Heat sesame oil in a pan over medium heat.\n2. Add tofu and cook until golden.\n3. Add bell pepper, carrot, and snow peas.\n4. Stir in soy sauce and ginger.\n5. Cook for 5 minutes.\n6. Serve with rice or noodles."
+      }
+    ],
+    "savedRecipes": []
+  }
+  
