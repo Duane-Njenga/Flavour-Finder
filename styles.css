@@ -1,3 +1,133 @@
 .hidden{
     display: none;
 }
+
+#navbar{
+    display: block;
+    background-color: tomato;
+    padding-right: 25%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+a{
+    border: rgb(255, 84, 53) 5px solid;
+    border-radius: 10px;
+    color:white;
+}
+
+a:hover{
+    border: rgb(163, 30, 6) 5px solid;
+    border-radius: 10px;
+    color:black;
+    background-color: rgb(222, 104, 0);
+}
+#darkmode{
+    float: right;
+    display:inline-flex;
+    margin: 2px solid black;
+    padding-right: 10px ;
+
+
+}
+.navbar-item{
+    display: inline-block;
+    padding-right: auto;
+    padding: auto;
+}
+
+#Home{
+    background-color: green;
+    height: 30px;
+    text-align: center;
+    color:white ;
+}
+
+#Favourites{
+    background-color: firebrick;
+    height: 30px;
+    text-align: center;
+    color:white ;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+  
+.dropdown-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 14px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px; 
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#dropdown:hover .dropdown-content {
+    display: table;
+    height: auto;
+    border-radius: 4px;
+}
+  
+
+/* Container for the switch */
+#darkmode {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* Hide default checkbox */
+  #darkmodeToggle {
+    display: none;
+  }
+  
+  /* The slider itself */
+  .slider {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  /* Slider circle (the toggle) */
+  .slider::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 2px;
+    top: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+  /* Change background color when toggled */
+  #darkmodeToggle:checked + .slider {
+    background-color: #4CAF50;
+  }
+  
+  /* Move the toggle to the right when checked */
+  #darkmodeToggle:checked + .slider::before {
+    transform: translateX(20px);
+  }
+  

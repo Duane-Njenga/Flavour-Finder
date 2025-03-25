@@ -4,19 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href ="./styles.css">
+    <script src="https://kit.fontawesome.com/8dae60bd24.js" crossorigin="anonymous"></script>
+
     <title>Document</title>
+    
 </head>
 <body>
     <div id = "navbar">
         <a class = 'navbar-item' href=" #Home">Home</a>
         <a class = 'navbar-item' href="#Favourites"> Favourites</a>
-        <input type = "search" id = "searchInput" placeholder="Search Recipes"/>
+       <form id ="search" class = 'navbar-item'>
+
+            <input type = "search" id = "searchInput" placeholder="Search Recipes" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <div id="dropdown" class = 'navbar-item'>
+            <button class="dropdown-btn">Filter by Category</button>
+            <div class="dropdown-content">
+                <label class="filter-content" for =''>Food category 1</label>
+                <input type = "checkbox" id =''>
+
+                <label class="filter-content" for =''>Food category 1</label>
+                <input type = "checkbox" id =''>
+
+                <label class="filter-content" for =''>Food category 1</label>
+                <input type = "checkbox" id =''>
+
+            </div>
+          </div>
+
+        <div id = "darkmode" class = 'navbar-item'>
+            <div id="darkmode" class="navbar-item">
+                <label class="switch">
+                  <input type="checkbox" id="darkmodeToggle">
+                  <span class="slider"></span>
+                </label>
+                <span>Dark mode</span>
+              </div>
+              
+        </div>
     </div>
     <div id="Home">
         <p>This is Home</p>
 
     </div>
-    <div id="Favourites" style = "color:red ;" >
+    <div id="Favourites" >
         <p> This is for favourites</p>
     </div>
 </body>
