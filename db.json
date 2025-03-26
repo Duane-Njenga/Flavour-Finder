@@ -128,21 +128,6 @@
   ],
   "savedRecipes": [
     {
-      "id": "2",
-      "name": "Caprese Salad",
-      "category": "Vegetarian",
-      "ingredients": [
-        "4 tomatoes, sliced",
-        "250g mozzarella cheese, sliced",
-        "Fresh basil leaves",
-        "2 tbsp olive oil",
-        "Salt and pepper to taste",
-        "Balsamic glaze (optional)"
-      ],
-      "picture": "https://hips.hearstapps.com/hmg-prod/images/caprese-salad-recipe-2-664ceea357d6f.jpg?crop=0.8888888888888888xw:1xh;center,top&resize=1200:*",
-      "cookingInstructions": "1. Arrange tomato and mozzarella slices on a plate.\n2. Add basil leaves between slices.\n3. Drizzle with olive oil.\n4. Season with salt and pepper.\n5. Drizzle with balsamic glaze if desired.\n6. Serve chilled."
-    },
-    {
       "id": "3",
       "name": "Grilled Salmon with Asparagus",
       "category": "Pescatarian",

@@ -5,9 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(res => res.json())
         .then(recipes => {
             recipes.forEach(recipe => createCard(recipe));
-            loadSavedRecipes(); 
+            loadSavedRecipes();
+            linkRecipes(); 
         });
     setupDarkmode();
+    
 });
 
 function createCard(recipe) {
@@ -17,7 +19,7 @@ function createCard(recipe) {
     card.className = 'card';
 
     card.innerHTML = `
-        <a href = "recipe.html" class = "recipe-display"><img src="${recipe.picture}" alt="${recipe.name}" class="image">
+        <a href = "#" id = "${recipe.id}" class = "recipe-display"><img src="${recipe.picture}" alt="${recipe.name}" class="image">
         <p class="name">${recipe.name}</p></a>
         <p class="category">Category: ${recipe.category}</p>
         <button class="save" id="${recipe.id}">Save</button>
@@ -206,10 +208,26 @@ function filter() {
     }
 }
 
-
 document.getElementById('Vegan').addEventListener('change', filter);
 document.getElementById('Gluten-Free').addEventListener('change', filter);
 document.getElementById('Vegetarian').addEventListener('change', filter);
 document.getElementById('Pescatarian').addEventListener('change', filter);
+
+//Links
+
+function linkRecipes(){
+let recipeLinks = document.getElementsByClassName('recipe-display')
+    console.log(recipeLinks);
+    
+    
+for(let element of recipeLinks){
+    console.log(element);
+    element.addEventListener('click', () => {
+        localStorage.setItem('selectedRecipeId', element.getAttribute('id'))
+        window.location.href = `recipe.html`
+    })
+    
+}
+}
 
 
