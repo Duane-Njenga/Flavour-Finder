@@ -121,10 +121,15 @@ a:hover{
 }
 #dropdown:hover .dropdown-content {
     display: block;
+    flex-wrap: wrap;
+    position: absolute;
     height:  auto;
     border-radius: 4px;
+    width: 10%;
+    text-align: left;
+    gap: 4px;
+    z-index: 10;
 }
-  
 
 
 #darkmode {

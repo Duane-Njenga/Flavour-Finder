@@ -53,7 +53,7 @@ function setupDarkmode(){
 
     if(localStorage.getItem("darkMode") === "enabled"){
       
-        for(let element of card ){
+        for(let element of cards ){
             element.classList.add("dark-mode")
         }
 
@@ -73,7 +73,7 @@ function setupDarkmode(){
         navbar.classList.add("dark-mode");
 
 
-        for(let elment of card ){
+        for(let elment of cards ){
             elment.classList.add("dark-mode")
         }
 
@@ -85,7 +85,7 @@ function setupDarkmode(){
             navbar.classList.remove("dark-mode");
 
 
-            for(let elment of card ){
+            for(let elment of cards ){
              elment.classList.remove("dark-mode");
             }
 
@@ -98,13 +98,13 @@ setupDarkmode();
 
 let searchInput = document.getElementById('searchInput');
 let searchForm = document.getElementById('search')
-let card = document.getElementsByClassName("card");
+let cards = document.getElementsByClassName("card");
 
 function search(){
     let searchVal = searchInput.value
 
-    for(let element of card){
-        let name = element.children[1].textContent;
+    for(let card of cards){
+        let name = card.children[1].textContent;
 
             name = name.toLowerCase();
             searchVal = searchVal.toLowerCase();
@@ -128,3 +128,37 @@ searchForm.addEventListener("submit", (e)=>{
     search()
      
 })
+
+
+
+
+
+function filter() {
+    let veganCheck = document.getElementById('Vegan').checked;
+    let glutenCheck = document.getElementById('Gluten-Free').checked;
+    let vegetarianCheck = document.getElementById('Vegetarian').checked;
+    let pescCheck = document.getElementById('Pescatarian').checked;
+    
+    
+    for (let card of cards) {
+        let category = card.querySelector('.category').innerText.replace('Category: ', '').toLowerCase();
+
+
+        if (
+            (veganCheck && category === 'vegan') ||
+            (glutenCheck && category === 'gluten-free') ||
+            (vegetarianCheck && category === 'vegetarian') ||
+            (pescCheck && category === 'pescatarian')
+        ) {
+            
+        } else {
+            card.classList.add('hidden');
+        }
+    }
+}
+
+
+document.getElementById('Vegan').addEventListener('change', filter);
+document.getElementById('Gluten-Free').addEventListener('change', filter);
+document.getElementById('Vegetarian').addEventListener('change', filter);
+document.getElementById('Pescatarian').addEventListener('change', filter);
