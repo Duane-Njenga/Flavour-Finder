@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
             recipes.forEach(recipe => createCard(recipe));
             loadSavedRecipes(); 
         });
+    setupDarkmode();
 });
 
 function createCard(recipe) {
@@ -138,7 +139,7 @@ function setupDarkmode(){
     })
 }
 
-setupDarkmode();
+
 
 
 // Search Functionality

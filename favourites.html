@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="./styles.css">
+    <script src="https://kit.fontawesome.com/8dae60bd24.js" crossorigin="anonymous"></script>
+
+    <title>Flavour Finder</title>
+    
+</head>
+<body>
+    <div id = "navbar">
+        <a class = 'navbar-redirect' href="/index.html">Home</a>
+        <a class = 'navbar-redirect' href="/favourites.html"> Favourites</a>
+       <form id ="search" class = 'navbar-item'>
+
+            <input type = "search" id = "searchInput" placeholder="Search Recipes"  required/>
+            <button type="submit" id = "searchBtn"><i class="fa fa-search"></i></button>
+        </form>
+        <div id="dropdown" class = 'navbar-item'>
+            <button class="dropdown-btn">Filter by Category <i class="fa-solid fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <label class="filter-content" for ='Vegetarian'>Vegetarian</label>
+                <input type = "checkbox" id ='Vegetarian' class = "filter-check">
+
+                <label class="filter-content" for ='Pescatarian'>Pescatarian</label>
+                <input type = "checkbox" id ='Pescatarian' class = "filter-check">
+
+                <label class="filter-content" for ='Gluten-Free'>Gluten-Free</label>
+                <input type = "checkbox" id ='Gluten-Free' class = "filter-check">
+
+                <label class="filter-content" for ='Vegan'>Vegan</label>
+                <input type = "checkbox" id ='Vegan' class = "filter-check">
+
+            </div>
+          </div>
+
+        <div id = "darkmode" class = 'navbar-item'>
+            <div id="darkmode" class="navbar-item">
+                <label class="switch">
+                  <input type="checkbox" id="darkmodeToggle">
+                  <span class="slider"></span>
+                </label>
+                <span>Dark mode</span>
+              </div>
+              
+        </div>
+    </div>
+    <div id="welcome-message">
+        <h1>Welcome to Flavour Finder!</h1>
+        <p>Discover delicious recipes tailored to your dietary needs. From vegetarian delights to gluten-free goodness — find your next favorite meal today!</p>
+    </div>
+    
+    <div id="Home" class = "header">
+        
+
+
+    </div>
+</body>
+<script src = './favourites.js'></script>
+<script src ="/index.js"></script>
+</html>
