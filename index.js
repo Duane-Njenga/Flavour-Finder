@@ -45,7 +45,8 @@ document.addEventListener("DOMContentLoaded", () =>{
 
         
         home.appendChild(newDiv);
-        })
+        });
+        save();
     })
 
 
@@ -65,7 +66,8 @@ document.addEventListener("DOMContentLoaded", () =>{
             let ID = postCard[4].textContent;
             console.log(ID);
             
-            btn.addEventListener('click', () => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
         
                 if (btn.classList.contains('save')) { // Use .contains() instead of ==
                     btn.classList.add('saved');
@@ -112,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     }
         
 
-save();
+
 
     
 });
@@ -219,7 +221,7 @@ function filter() {
     let vegetarianCheck = document.getElementById('Vegetarian').checked;
     let pescCheck = document.getElementById('Pescatarian').checked;
     
-    if(veganCheck || glutenCheck || pescCheck || vegetarianCheck === true){
+    if((veganCheck || glutenCheck || pescCheck || vegetarianCheck) === true){
         for (let card of cards) {
             let category = card.querySelector('.category').innerText.replace('Category: ', '').toLowerCase();
 
@@ -235,7 +237,7 @@ function filter() {
             }
         }
     }else{
-        location.reload()
+        location.reload();
     }
 }
 
