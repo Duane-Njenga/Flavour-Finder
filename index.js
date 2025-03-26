@@ -48,7 +48,6 @@ function setupDarkmode(){
     let darkModeToggle = document.getElementById("darkmodeToggle")
 
     let welcome = document.getElementById("welcome-message");
-    let card = document.getElementsByClassName("card");
     let navbar = document.getElementById("navbar");
     
 
@@ -97,3 +96,35 @@ function setupDarkmode(){
 
 setupDarkmode();
 
+let searchInput = document.getElementById('searchInput');
+let searchForm = document.getElementById('search')
+let card = document.getElementsByClassName("card");
+
+function search(){
+    let searchVal = searchInput.value
+
+    for(let element of card){
+        let name = element.children[1].textContent;
+
+            name = name.toLowerCase();
+            searchVal = searchVal.toLowerCase();
+
+        if(name.includes(searchVal)){
+            console.log("Food Found");
+            
+        }else{
+            element.classList.add('hidden');   
+        }
+            
+        
+        
+    }
+    
+}
+
+
+searchForm.addEventListener("submit", (e)=>{
+    e.preventDefault()
+    search()
+     
+})
