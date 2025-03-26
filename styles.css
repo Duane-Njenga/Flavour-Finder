@@ -9,17 +9,18 @@
     font-size: 18px;
 }
 
-a{
+.navbar-redirect{
     border-radius: 10px;
     color:white;
 }
 
-a:hover{
+.navbar-redirect:hover{
     border: rgb(163, 30, 6) 5px solid;
     border-radius: 10px;
     color:black;
     background-color: rgb(163, 30, 6);
 }
+
 
 .navbar-item{
     display: inline-block;
@@ -84,6 +85,11 @@ a:hover{
 .card .category {
     font-size: 16px;
     color: #555;
+}
+
+.recipe-display{
+    color: black;
+    text-decoration: none;
 }
 .save{
     background-color: green;

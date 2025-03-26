@@ -1,124 +1,88 @@
-document.addEventListener("DOMContentLoaded", () =>{
-    let home = document.getElementById("Home");
+document.addEventListener("DOMContentLoaded", () => {
     
 
     fetch(`http://localhost:3000/recipes`)
-    .then(res => res.json())
-    .then(recipes => {recipes.forEach(recipe => {
-        let newDiv = document.createElement("div");
-        let image = document.createElement("img");
-        let ID = document.createElement("p")
-        let name = document.createElement("p");
-        let category = document.createElement("p");
-        let saveBtn = document.createElement("button");
-        let link = document.createElement("a")
-            
-            newDiv.className = 'card';
-            //ID
-            ID.className = 'hidden';
-            ID.innerText = `${recipe.id}`;
-            //Image
-            image.className = 'image';
-            image.src = `${recipe.picture}`;
-            image.alt =`${recipe.name}`;
-            link.appendChild(image)
-
-            //Name
-            name.className = 'name';
-            name.innerText =`${recipe.name}`;
-
-
-            //Category
-            category.className = 'category';
-            category.innerText=`Category: ${recipe.category}`;
-           
-            //Save
-            saveBtn.innerText = `Save`;
-            saveBtn.className = 'save';
-
-            let elementsArray = [image, name, category, saveBtn, ID]
-            
-            elementsArray.forEach(element => {
-                
-                newDiv.appendChild(element)
-            })
-
-        
-        home.appendChild(newDiv);
+        .then(res => res.json())
+        .then(recipes => {
+            recipes.forEach(recipe => createCard(recipe));
+            loadSavedRecipes(); 
         });
-        save();
-    })
-
-
-    function save() {
-        let SaveButton = document.getElementsByClassName('save');
-        console.log(SaveButton);
-        
-        for (let btn of SaveButton) {
-            console.log(btn);
-            
-            let postCard = btn.parentElement.children; // Use children instead of childNodes
-            console.log(btn.parentElement);
-            
-            let name = postCard[1].textContent;
-            let category = postCard[2].innerText.replace('Category: ', '');
-            let picture = postCard[0].src;
-            let ID = postCard[4].textContent;
-            console.log(ID);
-            
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-        
-                if (btn.classList.contains('save')) { // Use .contains() instead of ==
-                    btn.classList.add('saved');
-                    btn.classList.remove('save');
-                    btn.innerText = 'Unsave';
-        
-
-                    fetch("http://localhost:3000/savedRecipes",  
-                        {
-                            method : "POST",
-                            headers: {
-                                "Content-Type": "application/json",
-                                "Accept" : "application/json"
-                            },
-                            body : JSON.stringify({
-                                id:`${ID}`,
-                                name : `${name}`,
-                                category: `${category}`,
-                                picture : `${picture}`
-                            })
-                        }
-                    );
-                    
-                } else {
-                    btn.classList.remove('saved');
-                    btn.classList.add('save');
-                    btn.innerText = 'Save';
-
-                    fetch(`http://localhost:3000/savedRecipes/${ID}`,  
-                        {
-                            method : "DELETE",
-                            headers: {
-                                "Content-Type": "application/json",
-                                "Accept" : "application/json"
-                            },
-                            
-                        }
-                    );
-                }
-            });
-        }
-        
-
-    }
-        
-
-
-
-    
 });
 
+function createCard(recipe) {
+    let home = document.getElementById("Home");
+
+    let card = document.createElement("div");
+    card.className = 'card';
+
+    card.innerHTML = `
+        <a href = "recipe.html" class = "recipe-display"><img src="${recipe.picture}" alt="${recipe.name}" class="image">
+        <p class="name">${recipe.name}</p></a>
+        <p class="category">Category: ${recipe.category}</p>
+        <button class="save" id="${recipe.id}">Save</button>
+    `;
+
+    home.appendChild(card);
+
+
+    let saveBtn = card.querySelector('button');
+    saveBtn.addEventListener('click', () => save(saveBtn, recipe));
+}
+
+function save(btn, recipe) {
+    let savedRecipes = JSON.parse(localStorage.getItem("savedRecipes")) || [];
+    let isSaved = savedRecipes.some(item => item.id === recipe.id);
+
+    if (isSaved) {
+
+        savedRecipes = savedRecipes.filter(item => item.id !== recipe.id);
+        btn.classList.remove('saved');
+        btn.classList.add('save');
+        btn.innerText = 'Save';
+
+
+        fetch(`http://localhost:3000/savedRecipes/${recipe.id}`, 
+            { method: "DELETE",
+                headers: 
+                {"Content-Type": "application/json",
+                    "Accept" : "application/json"
+                },
+             }
+        );
+    } else {
+
+        savedRecipes.push(recipe);
+        btn.classList.add('saved');
+        btn.classList.remove('save');
+        btn.innerText = 'Unsave';
+
+
+        fetch("http://localhost:3000/savedRecipes", {
+            method: "POST",
+            headers:
+            { "Content-Type": "application/json",
+                "Accept" : "application/json"
+            },
+            body: JSON.stringify(recipe)
+        });
+    }
+
+
+    localStorage.setItem("savedRecipes", JSON.stringify(savedRecipes));
+}
+
+function loadSavedRecipes() {
+    let savedRecipes = JSON.parse(localStorage.getItem("savedRecipes")) || [];
+
+    savedRecipes.forEach(recipe => {
+        let btn = document.querySelector(`button[id="${recipe.id}"]`);
+        if (btn) {
+            btn.classList.add('saved');
+            btn.classList.remove('save');
+            btn.innerText = 'Unsave';
+        }
+    });
+}
 
 
 
