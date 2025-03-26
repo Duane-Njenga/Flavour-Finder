@@ -178,7 +178,10 @@ a:hover{
 }
 
 
-/* body, .dark-mode{
+.dark-mode, div#welcome-message.dark-mode, div#welcome-message.dark-mode *, .card.dark-mode p {
     background-color: #333;
     color: white
-} */
+} 
+div#navbar.dark-mode{
+    background-color: rgb(175, 28, 2);
+}

@@ -44,4 +44,56 @@ document.addEventListener("DOMContentLoaded", () =>{
     })
 });
 
+function setupDarkmode(){
+    let darkModeToggle = document.getElementById("darkmodeToggle")
+
+    let welcome = document.getElementById("welcome-message");
+    let card = document.getElementsByClassName("card");
+    let navbar = document.getElementById("navbar");
+    
+
+    if(localStorage.getItem("darkMode") === "enabled"){
+      
+        for(let element of card ){
+            element.classList.add("dark-mode")
+        }
+
+        document.body.classList.add("dark-mode");
+        welcome.classList.add("dark-mode");
+        navbar.classList.add("dark-mode");
+        
+        darkModeToggle.checked = true;
+        
+    }
+
+    darkModeToggle.addEventListener("change", () => {
+        if(darkModeToggle.checked){
+
+        document.body.classList.add("dark-mode")
+        welcome.classList.add("dark-mode");
+        navbar.classList.add("dark-mode");
+
+
+        for(let elment of card ){
+            elment.classList.add("dark-mode")
+        }
+
+
+        localStorage.setItem("darkMode", "enabled");
+        } else {
+            document.body.classList.remove("dark-mode");
+            welcome.classList.remove("dark-mode");
+            navbar.classList.remove("dark-mode");
+
+
+            for(let elment of card ){
+             elment.classList.remove("dark-mode");
+            }
+
+        localStorage.setItem("darkMode", "disabled");
+        }   
+    })
+}
+
+setupDarkmode();
 
