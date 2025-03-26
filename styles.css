@@ -4,6 +4,7 @@
 
 #navbar{
     display: block;
+    flex-wrap: wrap;
     background-color: tomato;
     padding-right: 25%;
     margin-left: 10px;
@@ -13,7 +14,6 @@
 }
 
 a{
-    border: rgb(255, 84, 53) 5px solid;
     border-radius: 10px;
     color:white;
 }
@@ -22,35 +22,35 @@ a:hover{
     border: rgb(163, 30, 6) 5px solid;
     border-radius: 10px;
     color:black;
-    background-color: rgb(222, 104, 0);
+    background-color: rgb(163, 30, 6);
 }
-#darkmode{
-    float: right;
-    display:inline-flex;
-    margin: 2px solid black;
-    padding-right: 10px ;
 
-
-}
 .navbar-item{
     display: inline-block;
     padding-right: auto;
     padding: auto;
 }
 
-#home-head{
-    background-color: green;
-    height: 30px;
+#welcome-message {
     text-align: center;
-    color:white ;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: #333 0 8px 10px;
 }
 
-#favourites-head{
-    background-color: firebrick;
-    height: 30px;
-    text-align: center;
-    color:white ;
+#welcome-message h1 {
+    color: #333;
+    font-size: 28px;
 }
+
+#welcome-message p {
+    color: #555;
+    font-size: 18px;
+}
+
 #Home {
     display: flex;
     flex-wrap: wrap;
@@ -61,20 +61,22 @@ a:hover{
 .card {
     display: flex;
     flex-direction: column;
-    border: rgb(163, 30, 6) 10px solid;
+    border: rgb(163, 30, 6) 6px solid;
     width: 300px;
     height: auto;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
     background-color: #fff;
 }
 
-.card > img {
+.card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-bottom: 4px solid rgb(163, 30, 6);
+    border-radius: 2px;
+
 }
 
 .card .name {
@@ -87,7 +89,16 @@ a:hover{
     font-size: 16px;
     color: #555;
 }
-
+.save{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.save:hover{
+    color: black;
+    background-color: #2d8b30;
+}
 .dropdown {
     position: relative;
     display: inline-block;
@@ -119,19 +130,20 @@ a:hover{
 }
   
 
-/* Container for the switch */
+
 #darkmode {
     display: flex;
+    float: right;
     align-items: center;
     gap: 8px;
 }
   
-  /* Hide default checkbox */
+
 #darkmodeToggle {
     display: none;
 }
   
-  /* The slider itself */
+
 .slider {
     position: relative;
     display: inline-block;
@@ -143,7 +155,7 @@ a:hover{
     cursor: pointer;
 }
   
-  /* Slider circle (the toggle) */
+
 .slider::before {
     content: '';
     position: absolute;
@@ -156,12 +168,17 @@ a:hover{
     transition: transform 0.3s;
 }
   
-  /* Change background color when toggled */
 #darkmodeToggle:checked + .slider {
     background-color: #4CAF50;
 }
   
-  /* Move the toggle to the right when checked */
 #darkmodeToggle:checked + .slider::before {
     transform: translateX(20px);
+    background-color: #333;
 }
+
+
+/* body, .dark-mode{
+    background-color: #333;
+    color: white
+} */

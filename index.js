@@ -9,36 +9,39 @@ document.addEventListener("DOMContentLoaded", () =>{
         let image = document.createElement("img")
         let name = document.createElement("p");
         let category = document.createElement("p");
-        let span = document.createElement("span");
         let saveBtn = document.createElement("button");
-
+        let link = document.createElement('a')
+            link.appendChild(newDiv)
             newDiv.className = 'card';
-
+            //Image
             image.className = 'image';
             image.src = `${recipe.picture}`;
-            image.alt =`${recipe.name}`
-            newDiv.appendChild(image);
+            image.alt =`${recipe.name}`;
 
+            //Name
             name.className = 'name';
             name.innerText =`${recipe.name}`;
-            newDiv.appendChild(name)
 
-            span.className = 'like-glyph';
-            newDiv.appendChild(span);
 
+            //Category
             category.className = 'category';
             category.innerText=`Category: ${recipe.category}`;
-
-            newDiv.appendChild(category)            
-
+           
+            //Save
             saveBtn.innerText = `Save`;
-            newDiv.appendChild(saveBtn)
+            saveBtn.className = 'save';
 
-        
+            let elementsArray = [image, name, category, saveBtn]
+
+            elementsArray.forEach(element => {
+                newDiv.appendChild(element)
+            })
+
 
         home.appendChild(newDiv);
     });
         
     })
-})
-;
+});
+
+
