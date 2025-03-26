@@ -194,3 +194,13 @@ div#navbar.dark-mode{
     display: none;
 }
 
+.saved{
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.saved:hover{
+    color: black;
+    background-color: rgb(208, 27, 3);
+}
