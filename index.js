@@ -113,7 +113,7 @@ function search(){
             console.log("Food Found");
             
         }else{
-            element.classList.add('hidden');   
+            card.classList.add('hidden');   
         }
             
         
@@ -150,7 +150,7 @@ function filter() {
             (vegetarianCheck && category === 'vegetarian') ||
             (pescCheck && category === 'pescatarian')
         ) {
-            
+
         } else {
             card.classList.add('hidden');
         }
