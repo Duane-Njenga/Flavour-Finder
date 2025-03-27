@@ -217,13 +217,13 @@ document.getElementById('Pescatarian').addEventListener('change', filter);
 
 function linkRecipes(){
 let recipeLinks = document.getElementsByClassName('recipe-display')
-    console.log(recipeLinks);
+
     
     
 for(let element of recipeLinks){
-    console.log(element);
     element.addEventListener('click', () => {
-        localStorage.setItem('selectedRecipeId', element.getAttribute('id'))
+        
+        localStorage.setItem('selectedRecipeId', element.id)
         window.location.href = `recipe.html`
     })
     
