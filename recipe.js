@@ -37,11 +37,9 @@ setupDarkmode();
 
 
 });
-//Darkmode <<To be worked on 
+ 
 function setupDarkmode(){
     let darkModeToggle = document.getElementById("darkmodeToggle")
-
-    // let welcome = document.getElementById("welcome-message");
     let navbar = document.getElementById("navbar");
     let ingredients = document.getElementById("ingredients")
     let instructions =document.getElementById("instructions")
@@ -73,8 +71,8 @@ function setupDarkmode(){
         localStorage.setItem("darkMode", "enabled");
         } else {
             document.body.classList.remove("dark-mode");
-            ingredients.classList.add("dark-mode");
-            instructions.classList.add("dark-mode")
+            ingredients.classList.remove("dark-mode");
+            instructions.classList.remove("dark-mode")
             navbar.classList.remove("dark-mode");
 
 
