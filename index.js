@@ -175,6 +175,7 @@ function search(){
 searchForm.addEventListener("submit", (e)=>{
     e.preventDefault()
     search()
+    searchForm.reset()
      
 })
 
