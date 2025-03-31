@@ -54,3 +54,6 @@ json-server --watch db.json
 - JavaScript 
 - JSON Server (for mock backend)
 
+
+Blog link
+https://dev.to/duane_njenga/flavour-find-blog-32lb
