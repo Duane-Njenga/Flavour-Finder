@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let recipeId = localStorage.getItem('selectedRecipeId')
     
     if(recipeId)
-    fetch(`http://localhost:3000/recipes/${recipeId}`)
+    fetch(`https://flavour-json.onrender.com/recipes/${recipeId}`)
         .then(res => res.json())
         .then(recipe => { 
             document.getElementById('name'). innerText = recipe.name;

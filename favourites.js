@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch(`http://localhost:3000/savedRecipes`)
+    fetch(`https://flavour-json.onrender.com/savedRecipes`)
     .then(res => res.json())
     .then(recipes => recipes.forEach(recipe => {
         createCard(recipe)

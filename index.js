@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     
 
-    fetch(`http://localhost:3000/recipes`)
+    fetch(`https://flavour-json.onrender.com/recipes`)
         .then(res => res.json())
         .then(recipes => {
             recipes.forEach(recipe => createCard(recipe));
@@ -44,7 +44,7 @@ function save(btn, recipe) {
         btn.innerText = 'Save';
 
 
-        fetch(`http://localhost:3000/savedRecipes/${recipe.id}`, 
+        fetch(`https://flavour-json.onrender.com/savedRecipes/${recipe.id}`, 
             { method: "DELETE",
                 headers: 
                 {"Content-Type": "application/json",
@@ -60,7 +60,7 @@ function save(btn, recipe) {
         btn.innerText = 'Unsave';
 
 
-        fetch("http://localhost:3000/savedRecipes", {
+        fetch("https://flavour-json.onrender.com/savedRecipes", {
             method: "POST",
             headers:
             { "Content-Type": "application/json",
